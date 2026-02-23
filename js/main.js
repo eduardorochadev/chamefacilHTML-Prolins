@@ -657,18 +657,30 @@ function initForms() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      // Simular envio
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
       
       submitBtn.textContent = 'Enviando...';
       submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+      
+      // Remover mensagem anterior se existir
+      const oldMsg = form.parentElement.querySelector('.form-message');
+      if (oldMsg) oldMsg.remove();
       
       setTimeout(() => {
-        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
         form.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        
+        // Feedback visual inline
+        const msg = document.createElement('div');
+        msg.className = 'form-message form-message-success';
+        msg.innerHTML = '✓ Mensagem enviada com sucesso! Entraremos em contato em breve.';
+        form.parentElement.insertBefore(msg, form.nextSibling);
+        
+        setTimeout(() => msg.remove(), 6000);
       }, 1500);
     });
   });
@@ -741,7 +753,60 @@ function animateCounters() {
 }
 
 // ============================================
-// 9. INICIALIZAÇÃO
+// 9. COPYRIGHT DINÂMICO
+// ============================================
+function updateCopyright() {
+  const year = new Date().getFullYear();
+  document.querySelectorAll('[data-i18n="footer_rights"]').forEach(el => {
+    el.textContent = el.textContent.replace(/© \d{4}/, `© ${year}`);
+  });
+  // Páginas internas sem data-i18n
+  document.querySelectorAll('.footer-bottom p').forEach(el => {
+    if (!el.getAttribute('data-i18n')) {
+      el.textContent = el.textContent.replace(/© \d{4}/, `© ${year}`);
+    }
+  });
+}
+
+// ============================================
+// 10. BOTÃO WHATSAPP FLUTUANTE
+// ============================================
+function initWhatsAppButton() {
+  const btn = document.createElement('a');
+  btn.href = 'https://wa.me/5585998570031';
+  btn.target = '_blank';
+  btn.rel = 'noopener noreferrer';
+  btn.className = 'whatsapp-float';
+  btn.setAttribute('aria-label', 'Fale conosco pelo WhatsApp');
+  btn.innerHTML = `<svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.928 15.928 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.262 22.594c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.946.322-5.656-1.216-4.746-1.966-7.804-6.778-8.038-7.092-.226-.314-1.886-2.512-1.886-4.794 0-2.28 1.194-3.404 1.618-3.868.39-.426.916-.594 1.216-.594.152 0 .286.008.408.014.39.016.586.038.844.652.322.764 1.1 2.688 1.194 2.884.098.194.194.46.06.734-.128.278-.194.452-.39.694-.194.244-.408.542-.586.73-.194.206-.398.428-.172.838.228.408 1.008 1.664 2.166 2.696 1.488 1.326 2.742 1.736 3.132 1.93.39.194.616.166.844-.098.234-.27.994-1.156 1.26-1.554.26-.398.524-.332.884-.194.364.132 2.286 1.078 2.676 1.274.39.194.648.292.744.458.098.16.098.934-.292 2.034z"/></svg>`;
+  document.body.appendChild(btn);
+}
+
+// ============================================
+// 11. BOTÃO VOLTAR AO TOPO
+// ============================================
+function initBackToTop() {
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Voltar ao topo');
+  btn.innerHTML = `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>`;
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ============================================
+// 12. INICIALIZAÇÃO
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
@@ -751,6 +816,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initForms();
   initScrollAnimations();
   animateCounters();
-  
-  console.log('Chame Fácil - Site carregado com sucesso!');
+  updateCopyright();
+  initWhatsAppButton();
+  initBackToTop();
 });

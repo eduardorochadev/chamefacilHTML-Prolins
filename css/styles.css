@@ -1680,3 +1680,269 @@ a:hover {
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
+
+/* ============================================
+   21. BLOG ARTICLE PAGE
+   ============================================ */
+.blog-article {
+  padding: 140px 0 var(--spacing-2xl);
+}
+
+.blog-article-header {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.blog-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  transition: opacity var(--transition-fast);
+}
+
+.blog-back:hover {
+  opacity: 0.8;
+  color: var(--primary-light);
+}
+
+.blog-article-header h1 {
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.blog-article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.blog-article-image {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  display: block;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
+.blog-article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.blog-article-content h2 {
+  margin: var(--spacing-xl) 0 var(--spacing-md);
+}
+
+.blog-article-content h3 {
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+}
+
+.blog-article-content p {
+  margin-bottom: var(--spacing-md);
+}
+
+.blog-article-content ul,
+.blog-article-content ol {
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-lg);
+}
+
+.blog-article-content li {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-light);
+}
+
+.blog-article-content blockquote {
+  border-left: 4px solid var(--primary);
+  padding-left: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* Blog Share */
+.blog-share {
+  max-width: 800px;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.blog-share > span {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  color: var(--text-light);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.share-btn:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+  border-color: var(--primary);
+}
+
+/* Blog Related */
+.blog-related {
+  max-width: 800px;
+  margin: var(--spacing-xl) auto 0;
+}
+
+.blog-related h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.blog-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+}
+
+/* ============================================
+   22. WHATSAPP FLUTUANTE
+   ============================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all var(--transition-normal);
+  animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+@keyframes whatsappPulse {
+  0%, 100% { box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6); }
+}
+
+/* ============================================
+   23. BOTÃO VOLTAR AO TOPO
+   ============================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 28px;
+  z-index: 998;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-normal);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+  border-color: var(--primary);
+}
+
+/* ============================================
+   24. FEEDBACK DE FORMULÁRIO
+   ============================================ */
+.form-message {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-top: var(--spacing-sm);
+  animation: slideUp 0.3s ease;
+}
+
+.form-message-success {
+  background: rgba(0, 212, 170, 0.15);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.form-message-error {
+  background: rgba(255, 107, 53, 0.15);
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+}
+
+/* ============================================
+   25. FOCUS STYLES (ACESSIBILIDADE)
+   ============================================ */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(0, 212, 170, 0.2);
+}
+
+.form-input:focus-visible,
+.form-select:focus-visible {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
+}
+
+.nav a:focus-visible,
+.footer-links a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+  border-radius: var(--radius-md);
+}
