@@ -269,27 +269,11 @@ a:hover {
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-white);
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: var(--bg-dark);
-}
-
-.logo span {
-  color: var(--primary);
+.logo-img {
+  height: 140px;
+  width: auto;
 }
 
 .nav {
@@ -557,6 +541,21 @@ a:hover {
 }
 
 /* Hero Form */
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--primary);
+  box-shadow: 0 8px 40px rgba(0, 212, 170, 0.35), 0 0 80px rgba(0, 212, 170, 0.15);
+  object-fit: cover;
+}
+
 .hero-form-card {
   background: rgba(15, 33, 55, 0.9);
   backdrop-filter: blur(10px);
