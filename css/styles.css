@@ -1003,7 +1003,9 @@ a:hover {
 }
 
 .faq-item {
-  background: var(--bg-card);
+  background: rgba(15, 33, 55, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-sm);
