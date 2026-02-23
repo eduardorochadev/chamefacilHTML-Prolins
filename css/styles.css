@@ -1029,13 +1029,17 @@ a:hover {
 }
 
 .client-logos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-sm);
 }
 
 .client-logo {
   aspect-ratio: 1;
+  width: calc(33.333% - var(--spacing-sm));
+  min-width: 80px;
+  max-width: 120px;
   background: var(--bg-darker);
   border-radius: var(--radius-md);
   display: flex;
