@@ -1153,8 +1153,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   color: var(--primary);
-  font-size: 1.25rem;
   flex-shrink: 0;
+}
+
+.contact-method-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .contact-method h4 {
