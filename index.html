@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chame Fácil - Sistema inteligente de gestão de filas que reduz o tempo de espera e aumenta a satisfação dos clientes.">
+  <meta name="keywords" content="gestão de filas, sistema de senhas, atendimento, totem, QR Code, WhatsApp">
+  <meta name="author" content="Chame Fácil">
+  
+  <title>Chame Fácil - Sistema de Gestão de Filas Inteligente</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">C</div>
+          Chame<span>Fácil</span>
+        </a>
+        
+        <nav class="nav">
+          <a href="#como-funciona" data-i18n="nav_how_it_works">Como Funciona</a>
+          <a href="#funcionalidades" data-i18n="nav_features">Funcionalidades</a>
+          <a href="#precos" data-i18n="nav_pricing">Preços</a>
+          <a href="#faq" data-i18n="nav_faq">Dúvidas</a>
+          <div class="nav-divider"></div>
+          <a href="pages/parcerias.html" data-i18n="nav_partners">Parcerias</a>
+          <a href="pages/afiliados.html" data-i18n="nav_affiliates">Afiliados</a>
+          <a href="pages/blog.html" data-i18n="nav_blog">Blog</a>
+        </nav>
+        
+        <div class="header-actions">
+          <div class="language-selector">
+            <button class="language-btn">
+              <span class="lang-globe">🌐</span> 🇧🇷 PT <span class="lang-arrow">▼</span>
+            </button>
+            <div class="language-dropdown">
+              <div class="language-option active" data-lang="pt">🇧🇷 Português</div>
+              <div class="language-option" data-lang="es">🇪🇸 Español</div>
+              <div class="language-option" data-lang="en">🇺🇸 English</div>
+            </div>
+          </div>
+          <a href="#contato" class="btn btn-primary btn-sm" data-i18n="nav_demo">Solicitar Demo</a>
+        </div>
+        
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+      <a href="#como-funciona" data-i18n="nav_how_it_works">Como Funciona</a>
+      <a href="#funcionalidades" data-i18n="nav_features">Funcionalidades</a>
+      <a href="#precos" data-i18n="nav_pricing">Preços</a>
+      <a href="#faq" data-i18n="nav_faq">Dúvidas</a>
+      <a href="pages/parcerias.html" data-i18n="nav_partners">Parcerias</a>
+      <a href="pages/afiliados.html" data-i18n="nav_affiliates">Afiliados</a>
+      <a href="pages/blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="#contato" class="btn btn-primary" data-i18n="nav_demo">Solicitar Demo</a>
+    </nav>
+  </header>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="images/hero-bg.png" alt="Background">
+    </div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge" data-i18n="hero_badge">Sistema líder em gestão de filas</div>
+          <h1 class="hero-title">
+            <span data-i18n="hero_title">Transforme filas em</span>
+            <br><span class="text-primary" data-i18n="hero_title_highlight">experiências.</span>
+          </h1>
+          <p class="hero-description" data-i18n="hero_description">
+            Sistema inteligente de gestão de filas que reduz o tempo de espera, aumenta a satisfação dos clientes e otimiza seu atendimento.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contato" class="btn btn-primary" data-i18n="hero_btn_demo">Quero uma Demonstração</a>
+            <a href="#precos" class="btn btn-secondary" data-i18n="hero_btn_pricing">▶ Ver Preços</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-value" data-i18n="hero_stat_1_value">70%</div>
+              <div class="hero-stat-label" data-i18n="hero_stat_1_label">Redução no tempo de espera</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value" data-i18n="hero_stat_2_value">98%</div>
+              <div class="hero-stat-label" data-i18n="hero_stat_2_label">Satisfação dos clientes</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value" data-i18n="hero_stat_3_value">500+</div>
+              <div class="hero-stat-label" data-i18n="hero_stat_3_label">Empresas atendidas</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-form-card">
+          <h3 class="hero-form-title" data-i18n="form_title">Solicite uma Demonstração</h3>
+          <p class="hero-form-subtitle" data-i18n="form_subtitle">Preencha seus dados e entraremos em contato</p>
+          <form class="hero-form">
+            <input type="text" class="form-input" placeholder="Nome completo" data-i18n-placeholder="form_name" required>
+            <input type="email" class="form-input" placeholder="E-mail" data-i18n-placeholder="form_email" required>
+            <input type="tel" class="form-input" placeholder="Telefone" data-i18n-placeholder="form_phone" required>
+            <input type="text" class="form-input" placeholder="Segmento" data-i18n-placeholder="form_segment">
+            <button type="submit" class="btn btn-primary form-submit" data-i18n="form_submit">Solicitar Demo</button>
+          </form>
+          <div class="form-trust">
+            <span>✓ <span data-i18n="form_trust_1">Sem compromisso</span></span>
+            <span>✓ <span data-i18n="form_trust_2">100% gratuito</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COMO FUNCIONA
+       ============================================ -->
+  <section id="como-funciona" class="section section-dark">
+    <div class="container">
+      <div class="section-title">
+        <span>Simples e Eficiente</span>
+        <h2>Como Funciona</h2>
+        <p>Em apenas 4 passos, transforme a experiência de atendimento</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Cliente Retira Senha</h3>
+          <p>Via QR Code, totem ou aplicativo mobile</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Acompanha a Fila</h3>
+          <p>Pelo celular, TV ou notificações WhatsApp</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>É Chamado</h3>
+          <p>Recebe alerta quando chega sua vez</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Avalia o Atendimento</h3>
+          <p>Pesquisa de satisfação automática</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FUNCIONALIDADES
+       ============================================ -->
+  <section id="funcionalidades" class="section">
+    <div class="container">
+      <div class="section-title">
+        <span data-i18n="features_badge">Recursos Poderosos</span>
+        <h2 data-i18n="features_title">Funcionalidades Completas</h2>
+        <p data-i18n="features_subtitle">Tudo que você precisa para revolucionar seu atendimento</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3 data-i18n="feature_qrcode">QR Code</h3>
+          <p data-i18n="feature_qrcode_desc">Gere senhas via QR Code sem necessidade de totem físico.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎫</div>
+          <h3 data-i18n="feature_virtual">Senha Virtual</h3>
+          <p data-i18n="feature_virtual_desc">Retire sua senha de qualquer lugar pelo aplicativo.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 data-i18n="feature_dashboard">Dashboard</h3>
+          <p data-i18n="feature_dashboard_desc">Acompanhe todas as métricas em tempo real.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3 data-i18n="feature_whatsapp">WhatsApp</h3>
+          <p data-i18n="feature_whatsapp_desc">Notificações e acompanhamento via WhatsApp.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <h3 data-i18n="feature_survey">Pesquisa de Satisfação</h3>
+          <p data-i18n="feature_survey_desc">Avalie a qualidade do atendimento em tempo real.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔗</div>
+          <h3 data-i18n="feature_api">API Integrada</h3>
+          <p data-i18n="feature_api_desc">Integre com seus sistemas existentes facilmente.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3 data-i18n="feature_schedule">Agendamento</h3>
+          <p data-i18n="feature_schedule_desc">Sistema completo de agendamento online.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 data-i18n="feature_priority">Priorização</h3>
+          <p data-i18n="feature_priority_desc">Atendimento prioritário configurável.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PREÇOS
+       ============================================ -->
+  <section id="precos" class="section section-dark">
+    <div class="container">
+      <div class="section-title">
+        <span data-i18n="pricing_badge">Planos e Preços</span>
+        <h2 data-i18n="pricing_title">Escolha o Plano Ideal</h2>
+        <p data-i18n="pricing_subtitle">Soluções flexíveis para cada tamanho de negócio</p>
+      </div>
+      
+      <!-- Cards de Preços -->
+      <div class="pricing-cards">
+        <!-- Bronze -->
+        <div class="pricing-card">
+          <div class="pricing-icon">🥉</div>
+          <h3 data-i18n="plan_bronze">Bronze</h3>
+          <div class="pricing-price">R$125,90<small data-i18n="pricing_month">/mês</small></div>
+          <div class="pricing-implantation" data-i18n="pricing_no_implant">Sem implantação</div>
+          <ul class="pricing-features">
+            <li>1 Instalação</li>
+            <li>3 Usuários</li>
+            <li>1 Totem</li>
+            <li>QR Code</li>
+            <li>SMS</li>
+            <li>Treinamento Online</li>
+            <li class="disabled">TV Corporativa</li>
+            <li class="disabled">WhatsApp</li>
+            <li class="disabled">API Integração</li>
+          </ul>
+          <a href="#contato" class="btn btn-outline" data-i18n="pricing_start">Começar Agora</a>
+        </div>
+        
+        <!-- Prata -->
+        <div class="pricing-card">
+          <div class="pricing-icon">🥈</div>
+          <h3 data-i18n="plan_silver">Prata</h3>
+          <div class="pricing-price">R$350,00<small data-i18n="pricing_month">/mês</small></div>
+          <div class="pricing-implantation"><span data-i18n="pricing_implant">Implant.:</span> R$ 800</div>
+          <ul class="pricing-features">
+            <li>1 Instalação</li>
+            <li>5 Usuários</li>
+            <li>1 Totem</li>
+            <li>QR Code</li>
+            <li>SMS</li>
+            <li>Árvore de Atendimento</li>
+            <li>WhatsApp</li>
+            <li>Treinamento 8h</li>
+            <li class="disabled">TV Corporativa</li>
+          </ul>
+          <a href="#contato" class="btn btn-outline" data-i18n="pricing_start">Começar Agora</a>
+        </div>
+        
+        <!-- Ouro -->
+        <div class="pricing-card popular">
+          <div class="pricing-badge" data-i18n="pricing_popular">Mais Popular</div>
+          <div class="pricing-icon">🥇</div>
+          <h3 data-i18n="plan_gold">Ouro</h3>
+          <div class="pricing-price">R$550,00<small data-i18n="pricing_month">/mês</small></div>
+          <div class="pricing-implantation"><span data-i18n="pricing_implant">Implant.:</span> R$ 1.600</div>
+          <ul class="pricing-features">
+            <li>1 Instalação</li>
+            <li>10 Usuários</li>
+            <li>2 Totens</li>
+            <li>TV Corporativa</li>
+            <li>WhatsApp</li>
+            <li>API Integração</li>
+            <li>Módulo de Coleta</li>
+            <li>Sistema de Pesquisa</li>
+            <li>Treinamento 16h</li>
+          </ul>
+          <a href="#contato" class="btn btn-primary" data-i18n="pricing_start">Começar Agora</a>
+        </div>
+        
+        <!-- Diamante -->
+        <div class="pricing-card">
+          <div class="pricing-icon">💎</div>
+          <h3 data-i18n="plan_diamond">Diamante</h3>
+          <div class="pricing-price">R$850,00<small data-i18n="pricing_month">/mês</small></div>
+          <div class="pricing-implantation"><span data-i18n="pricing_implant">Implant.:</span> R$ 2.400</div>
+          <ul class="pricing-features">
+            <li>1 Instalação</li>
+            <li>15 Usuários</li>
+            <li>3 Totens</li>
+            <li>TV Corporativa</li>
+            <li>WhatsApp</li>
+            <li>API Integração</li>
+            <li>Módulo de Coleta</li>
+            <li>Sistema de Pesquisa</li>
+            <li>Treinamento 24h</li>
+          </ul>
+          <a href="#contato" class="btn btn-outline" data-i18n="pricing_start">Começar Agora</a>
+        </div>
+        
+        <!-- Customizável -->
+        <div class="pricing-card">
+          <div class="pricing-icon">⚙️</div>
+          <h3 data-i18n="plan_custom">Customizável</h3>
+          <div class="pricing-price" data-i18n="pricing_consult">SOB CONSULTA</div>
+          <div class="pricing-implantation"><span data-i18n="pricing_hour">Hora:</span> R$ 160,00</div>
+          <ul class="pricing-features">
+            <li>Instalações sob demanda</li>
+            <li>Usuários ilimitados</li>
+            <li>Todas funcionalidades</li>
+            <li>Integrações customizadas</li>
+            <li>Suporte dedicado</li>
+            <li>SLA personalizado</li>
+          </ul>
+          <a href="#contato" class="btn btn-orange" data-i18n="pricing_quote">Orçamento</a>
+        </div>
+      </div>
+      
+      <!-- Tabela Comparativa -->
+      <h3 class="text-center mt-5 mb-3" data-i18n="pricing_table_title">Comparativo Completo de Funcionalidades</h3>
+      <div class="pricing-table-container">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Funcionalidade</th>
+              <th>Bronze</th>
+              <th>Prata</th>
+              <th>Ouro</th>
+              <th>Diamante</th>
+              <th>Customizável</th>
+              <th>Extra</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>API de Integração</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td>SOB CONSULTA</td>
+              <td>
+                <div class="pricing-extra">
+                  <span class="pricing-extra-value">R$ 100,00</span>
+                  <span class="pricing-extra-desc">API DISPONIBILIZADA</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Árvore de Atendimento</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td>SOB CONSULTA</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Instalações</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>SOB CONSULTA</td>
+              <td>
+                <div class="pricing-extra">
+                  <span class="pricing-extra-value">R$ 350,00</span>
+                  <span class="pricing-extra-desc">INSTALAÇÃO EXTRA</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Módulo de Coleta</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td>SOB CONSULTA</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>QR Code</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td>SOB CONSULTA</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Sistema de Pesquisa</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td>SOB CONSULTA</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>SMS</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td>SOB CONSULTA</td>
+              <td>
+                <div class="pricing-extra">
+                  <span class="pricing-extra-value">R$ 0,20</span>
+                  <span class="pricing-extra-desc">VALOR POR DISPARO</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>WhatsApp</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td>SOB CONSULTA</td>
+              <td>
+                <div class="pricing-extra">
+                  <span class="pricing-extra-value">R$ 100,00</span>
+                  <span class="pricing-extra-desc">SE HABILITADO +R$100/MÊS</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Totem</td>
+              <td>1</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>SOB CONSULTA</td>
+              <td>
+                <div class="pricing-extra">
+                  <span class="pricing-extra-value">R$ 100,00</span>
+                  <span class="pricing-extra-desc">VALOR TOTEM EXTRA</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Treinamento</td>
+              <td>Online</td>
+              <td>8 horas</td>
+              <td>16 horas</td>
+              <td>24 horas</td>
+              <td>SOB CONSULTA</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>TV Corporativa</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+              <td>SOB CONSULTA</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Usuários</td>
+              <td>3</td>
+              <td>5</td>
+              <td>10</td>
+              <td>15</td>
+              <td>SOB CONSULTA</td>
+              <td>
+                <div class="pricing-extra">
+                  <span class="pricing-extra-value">R$ 15,00</span>
+                  <span class="pricing-extra-desc">POR USUÁRIO EXTRA</span>
+                </div>
+              </td>
+            </tr>
+            <tr style="background: rgba(0,212,170,0.1);">
+              <td><strong>VALOR MENSAL</strong></td>
+              <td><strong>R$ 125,90</strong></td>
+              <td><strong>R$ 350,00</strong></td>
+              <td><strong>R$ 550,00</strong></td>
+              <td><strong>R$ 850,00</strong></td>
+              <td><strong>SOB CONSULTA</strong></td>
+              <td>—</td>
+            </tr>
+            <tr style="background: rgba(0,212,170,0.1);">
+              <td><strong>VALOR IMPLANTAÇÃO</strong></td>
+              <td><strong>GRÁTIS</strong></td>
+              <td><strong>R$ 800,00</strong></td>
+              <td><strong>R$ 1.600,00</strong></td>
+              <td><strong>R$ 2.400,00</strong></td>
+              <td><strong>SOB CONSULTA</strong></td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="pricing-note">
+        💡 <span data-i18n="pricing_note">Hora de Customização:</span> <strong>R$ 160,00</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CLIENTES
+       ============================================ -->
+  <section id="clientes" class="section">
+    <div class="container">
+      <div class="section-title">
+        <span data-i18n="clients_badge">Quem Confia em Nós</span>
+        <h2 data-i18n="clients_title">Nossos Clientes por Segmento</h2>
+        <p data-i18n="clients_subtitle">Empresas de diversos setores já transformaram seu atendimento com o Chame Fácil</p>
+      </div>
+      <div class="clients-segments">
+        <div class="client-segment">
+          <h3>🏥 <span data-i18n="clients_health">Saúde</span></h3>
+          <div class="client-logos">
+            <div class="client-logo"><span class="client-logo-icon">🏥</span>Hospital Regional</div>
+            <div class="client-logo"><span class="client-logo-icon">⚕️</span>Clínica Saúde+</div>
+            <div class="client-logo"><span class="client-logo-icon">🔬</span>Lab Diagnóstico</div>
+            <div class="client-logo"><span class="client-logo-icon">💊</span>Farmácia Popular</div>
+            <div class="client-logo"><span class="client-logo-icon">🦷</span>Odonto Smile</div>
+            <div class="client-logo"><span class="client-logo-icon">👁️</span>Ótica Visual</div>
+          </div>
+        </div>
+        <div class="client-segment">
+          <h3>🛒 <span data-i18n="clients_retail">Varejo</span></h3>
+          <div class="client-logos">
+            <div class="client-logo"><span class="client-logo-icon">🛒</span>Supermercado Central</div>
+            <div class="client-logo"><span class="client-logo-icon">📱</span>Loja de Eletrônicos</div>
+            <div class="client-logo"><span class="client-logo-icon">🏬</span>Magazine Express</div>
+            <div class="client-logo"><span class="client-logo-icon">👕</span>Moda Fashion</div>
+            <div class="client-logo"><span class="client-logo-icon">🏠</span>Casa & Decoração</div>
+            <div class="client-logo"><span class="client-logo-icon">🔧</span>Ferramentas Pro</div>
+          </div>
+        </div>
+        <div class="client-segment">
+          <h3>🍽️ <span data-i18n="clients_food">Alimentação</span></h3>
+          <div class="client-logos">
+            <div class="client-logo"><span class="client-logo-icon">🍔</span>Fast Food Express</div>
+            <div class="client-logo"><span class="client-logo-icon">🍕</span>Pizzaria Italiana</div>
+            <div class="client-logo"><span class="client-logo-icon">☕</span>Café Gourmet</div>
+            <div class="client-logo"><span class="client-logo-icon">🍰</span>Confeitaria Doce</div>
+            <div class="client-logo"><span class="client-logo-icon">🍣</span>Sushi House</div>
+            <div class="client-logo"><span class="client-logo-icon">🥗</span>Restaurante Natural</div>
+          </div>
+        </div>
+        <div class="client-segment">
+          <h3>🏛️ <span data-i18n="clients_public">Serviços Públicos</span></h3>
+          <div class="client-logos">
+            <div class="client-logo"><span class="client-logo-icon">🏛️</span>Prefeitura Municipal</div>
+            <div class="client-logo"><span class="client-logo-icon">📋</span>Cartório Central</div>
+            <div class="client-logo"><span class="client-logo-icon">🏦</span>Banco do Povo</div>
+            <div class="client-logo"><span class="client-logo-icon">📄</span>Detran</div>
+            <div class="client-logo"><span class="client-logo-icon">⚖️</span>Fórum</div>
+            <div class="client-logo"><span class="client-logo-icon">📮</span>Correios</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       DEPOIMENTOS
+       ============================================ -->
+  <section id="depoimentos" class="section section-dark">
+    <div class="container">
+      <div class="section-title">
+        <span data-i18n="testimonials_badge">Depoimentos</span>
+        <h2 data-i18n="testimonials_title">O Que Nossos Clientes Dizem</h2>
+        <p data-i18n="testimonials_subtitle">Histórias reais de empresas que transformaram seu atendimento</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"O Chame Fácil revolucionou nosso atendimento. Reduzimos o tempo de espera em 65% e a satisfação dos pacientes aumentou significativamente."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DR</div>
+            <div class="testimonial-info">
+              <h4>Dr. Ricardo Almeida</h4>
+              <p>Diretor - Hospital Santa Maria</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"A integração com WhatsApp foi um diferencial enorme. Nossos clientes adoram receber notificações e não precisam mais esperar na loja."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div class="testimonial-info">
+              <h4>Maria Costa</h4>
+              <p>Gerente - Supermercado Bom Preço</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"O dashboard em tempo real nos permite tomar decisões rápidas. Conseguimos otimizar nossa equipe e melhorar o atendimento."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JS</div>
+            <div class="testimonial-info">
+              <h4>João Silva</h4>
+              <p>Coordenador - Cartório Central</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ
+       ============================================ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-title">
+        <span data-i18n="faq_badge">Dúvidas Frequentes</span>
+        <h2 data-i18n="faq_title">Perguntas Frequentes</h2>
+        <p data-i18n="faq_subtitle">Tire suas dúvidas sobre o Chame Fácil</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q1">Como funciona a implantação do sistema?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq_a1">
+              A implantação é feita de forma remota pela nossa equipe técnica. Configuramos todo o sistema, integramos com seus equipamentos e treinamos sua equipe para usar todas as funcionalidades.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q2">Preciso de equipamentos especiais?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq_a2">
+              Não necessariamente. O sistema funciona com QR Code pelo celular, mas também oferecemos totens físicos e painéis de TV para uma experiência completa.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q3">O sistema integra com meu software atual?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq_a3">
+              Sim! Oferecemos API completa para integração com ERPs, CRMs e outros sistemas. Nossa equipe técnica auxilia em todo o processo de integração.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q4">Qual o suporte oferecido?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq_a4">
+              Oferecemos suporte técnico via WhatsApp, telefone e e-mail. Nos planos Ouro e Diamante, o suporte é prioritário com tempo de resposta reduzido.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q5">Posso testar antes de contratar?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content" data-i18n="faq_a5">
+              Sim! Oferecemos demonstração gratuita e período de teste para você conhecer todas as funcionalidades antes de decidir.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA
+       ============================================ -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-i18n="cta_title">Pronto para Transformar seu Atendimento?</h2>
+      <p data-i18n="cta_subtitle">Junte-se a mais de 500 empresas que já revolucionaram a experiência dos seus clientes.</p>
+      <a href="#contato" class="btn btn-lg" data-i18n="cta_btn">Solicitar Demonstração Gratuita</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTATO
+       ============================================ -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="section-title">
+        <span data-i18n="contact_badge">Fale Conosco</span>
+        <h2 data-i18n="contact_title">Entre em Contato</h2>
+        <p data-i18n="contact_subtitle">Estamos prontos para ajudar você a transformar seu atendimento</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Nossos Canais</h3>
+          <p>Escolha o melhor canal para falar conosco</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-method-icon">💬</div>
+              <div>
+                <h4 data-i18n="contact_whatsapp">WhatsApp</h4>
+                <p><a href="https://wa.me/5585998570031">(85) 99857-0031</a></p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">📧</div>
+              <div>
+                <h4 data-i18n="contact_email">E-mail</h4>
+                <p><a href="mailto:contato@chamefacil.com.br">contato@chamefacil.com.br</a></p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">📞</div>
+              <div>
+                <h4 data-i18n="contact_phone">Telefone</h4>
+                <p>(85) 99857-0031 | (85) 3103-3130 | (11) 2124-3417</p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">📍</div>
+              <div>
+                <h4 data-i18n="contact_location">Localização</h4>
+                <p>Fortaleza, CE - Brasil</p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">🕐</div>
+              <div>
+                <h4 data-i18n="contact_hours">Horário</h4>
+                <p data-i18n="contact_hours_value">Seg - Sex: 8h às 18h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-card">
+          <form class="contact-form">
+            <div class="form-row">
+              <input type="text" class="form-input" placeholder="Seu nome completo" data-i18n-placeholder="form_name" required>
+              <input type="email" class="form-input" placeholder="seu@email.com" data-i18n-placeholder="form_email" required>
+            </div>
+            <div class="form-row">
+              <input type="tel" class="form-input" placeholder="(00) 00000-0000" data-i18n-placeholder="form_phone" required>
+              <input type="text" class="form-input" placeholder="Nome da empresa" data-i18n-placeholder="form_company">
+            </div>
+            <select class="form-select">
+              <option value="" data-i18n="form_segment">Selecione o segmento</option>
+              <option value="saude">Saúde</option>
+              <option value="varejo">Varejo</option>
+              <option value="alimentacao">Alimentação</option>
+              <option value="servicos-publicos">Serviços Públicos</option>
+              <option value="outro">Outro</option>
+            </select>
+            <textarea class="form-input form-textarea" placeholder="Como podemos ajudar?" data-i18n-placeholder="form_message"></textarea>
+            <button type="submit" class="btn btn-primary" data-i18n="form_send">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">C</div>
+            Chame<span>Fácil</span>
+          </a>
+          <p data-i18n="footer_description">Sistema inteligente de gestão de filas que transforma a experiência de atendimento.</p>
+          <div class="footer-social">
+            <a href="#" title="Facebook">F</a>
+            <a href="#" title="Instagram">I</a>
+            <a href="#" title="LinkedIn">L</a>
+            <a href="https://wa.me/5585998570031" title="WhatsApp">W</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 data-i18n="footer_links">Links Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#como-funciona" data-i18n="nav_how_it_works">Como Funciona</a></li>
+            <li><a href="#funcionalidades" data-i18n="nav_features">Funcionalidades</a></li>
+            <li><a href="#precos" data-i18n="nav_pricing">Preços</a></li>
+            <li><a href="#depoimentos" data-i18n="testimonials_badge">Depoimentos</a></li>
+            <li><a href="#faq" data-i18n="nav_faq">Dúvidas</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Páginas</h4>
+          <ul class="footer-links">
+            <li><a href="pages/parcerias.html" data-i18n="nav_partners">Parcerias</a></li>
+            <li><a href="pages/afiliados.html" data-i18n="nav_affiliates">Afiliados</a></li>
+            <li><a href="pages/blog.html" data-i18n="nav_blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 data-i18n="footer_contact">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+5585998570031">(85) 99857-0031</a></li>
+            <li><a href="tel:+558531033130">(85) 3103-3130</a></li>
+            <li><a href="tel:+551121243417">(11) 2124-3417</a></li>
+            <li><a href="mailto:contato@chamefacil.com.br">contato@chamefacil.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">© 2024 Chame Fácil. Todos os direitos reservados.</p>
+        <div class="footer-legal">
+          <a href="#" data-i18n="footer_privacy">Política de Privacidade</a>
+          <a href="#" data-i18n="footer_terms">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
